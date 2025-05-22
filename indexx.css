@@ -1,0 +1,745 @@
+
+:root{
+    --bg-color:#fff;
+    --primary-color:#43ba7f;
+    --secondary-color:#43ba7f;
+    --text-color:#212741;
+    --link-color:#e36402;
+    --dark-bg-color:#181d30;
+}
+body{
+    background: var(--bg-color);
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+header{
+    background-color: grey;
+}
+
+
+.main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo img{
+    height: 5rem;
+    border-radius: 50%;
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li{
+    padding:0 1rem;
+
+}
+
+.nav-list li a{
+    color:var(--bg-color);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1rem;
+    transition: all 0.3 ease 0s;
+}
+.nav-list li a:hover,
+.nav-list li a:active{
+    color: var(--link-color);
+}
+.hamburger{
+    display: none;
+}
+
+@media (max-width: 560px){
+    .nav-list{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        margin-left: auto;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+    
+}
+
+@media (max-width:768px){
+    .logo img{
+        height: 4rem;
+    }
+    .nav-list li a{
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('../assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    color: var(--text-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 50px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+/* Hero Text */
+.hero-text h2 {
+    font-family: 'Helvetica Neue', sans-serif; /* Use Bootstrap font family or default font */
+    font-weight: bold;
+    font-size: 3rem; /* Adjust size as per design needs */
+    color: var(--bg-color);; /* Default text color (white) */
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Orange Color for EdTech and Services */
+.hero-text h2 em {
+    color: var(--link-color); /* Apply orange color to EdTech and Services */
+    text-decoration: none; /* Optional: Remove underline if you don't want it */
+}
+
+/* Divider Styling */
+.divider {
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color); /* Use primary color for the divider */
+    margin: 20px 0; /* Add space between the divider and other elements */
+}
+
+/* Paragraph Styling */
+.hero p {
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif; /* Use a clean sans-serif font for the paragraph */
+    color: var(--text-color); /* Ensure the paragraph text is white */
+    line-height: 1.6;
+    max-width: 800px; /* Limit paragraph width */
+    margin: 20px 0;
+    padding: 0;
+    color: var(--bg-color);
+}
+
+/* Ensure proper responsiveness */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 2rem; /* Reduce font size on smaller screens */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Smaller text for paragraph */
+    }
+}
+
+
+
+
+.section-heading{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-heading h6{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--link-color);
+    font-weight: 700;
+}
+
+.section-heading h4{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--text-color);
+}   
+
+@media (max-width: 990px){
+    .hero{
+        padding: 4rem;
+    }
+    .hero-text{
+        width: 90%;
+        text-align: center;
+    }
+    .hero-text h2{
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    .divider{
+        margin: 1rem auto;
+    }
+
+    .hero-text p{
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px){
+    .logo img{
+        height: 4rem;
+    }
+    .nav-list li a{
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+    .divider{
+        width: 12rem;
+    }
+}
+
+@media (max-width:560px){
+    
+    .hamburger{
+        display: block;
+        margin-left: auto;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+    .divider,
+    .hero-text p{
+        display: none;
+    }
+}
+
+.service-item{
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    width: 95%;
+}    
+
+.service-item i:hover{
+    margin-top:1rem;
+}
+
+.service-item h4{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.service-item p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--link-color);
+}
+
+.service-item i{
+    transition:all 0.5s;
+    float:right;
+    font-size:4rem;
+    color: var(--link-color);
+    margin-bottom: 2rem;
+    margin-right: -8%;
+}
+
+.service-item i:hover{
+    margin-top: 1rem;
+
+}
+
+@media (max-width:990px) {
+    .hero{
+        padding:4rem;
+    }
+    .hero-text{
+        width:90%;
+        text-align:center;
+    }
+
+    .hero-text h2{
+        font-size:2rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .divider{
+        margin: 1rem auto;
+    }
+
+    .hero-text p{
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width:768px) {
+    .logo img{
+        height: 4rem;
+    }
+    .nav-list li a{
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    .divider{
+        width: 12rem;
+    }
+
+    .service-item{
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+    }
+    .service-item i{
+        float:none;
+        margin-right: 0;
+        margin-bottom: 1rem;
+
+    }
+}
+
+@media (max-width:560px){
+    .nav-list{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+        margin-left: auto;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+    .divider,
+    .hero-text p{
+        display:none;
+    }
+}
+
+.banner{
+    background-image: url(../assets/images/banner-bg.jpg);
+    background-size: cover;
+    padding: 5rem 0;
+    margin-top: 2%;
+}
+
+.banner .buttons{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+}
+
+.banner h4{
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--bg-color);
+    line-height: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.banner h4 em{
+    font-style: normal;
+    color: var(--secondary-color);
+}
+
+.banner h4 strong{
+    color:var(--link-color);
+    font-weight: 700;
+}
+
+.btn a {
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 10px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.btn a:hover{
+    opacity: 0.9;
+    transform:scale(1.05);
+}
+
+.btn1 a{
+    color: var(--link-color);
+    background-color: var(--bg-color);
+}
+
+.btn2 a {
+    color: var(--bg-color);
+    background-color: var(--link-color);
+}
+
+.container-fluid{
+    margin-top: 3%  ;
+    margin-bottom: 3%;
+}
+
+.about-us{
+    margin-bottom: 3%;
+    text-align: center;
+   
+}
+
+.section-heading{
+    padding: 10px;
+}
+
+.coding-courses-button{
+    margin-bottom: 5%;
+    margin-top: -5%;
+}
+
+.table1{
+    padding: 5px;
+}
+
+/* Custom Styles */
+.text-orange {
+    color: #e36402; /* Orange color for Your Journey */
+}
+
+
+/* Full-screen background */
+.journey {
+     /* Replace with your background image */
+    background-size: cover;  /* Ensures the image covers the whole screen */
+    background-position: center; /* Centers the background image */
+    height: 100vh;  /* Ensure it takes up the whole viewport height */
+    display: flex;
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+}
+
+/* Form Styles with background overlay */
+.learning-form {
+    background-color: none;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 75%;
+    max-width: 800px; /* Maximum width for the form */
+}
+
+.learning-form .form-group label {
+    font-weight: 600;
+    color:var(--bg-color);
+}
+
+.learning-form .form-control {
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+}
+
+.learning-form .form-control:focus {
+    border-color: #e36402; /* Orange border on focus */
+    outline: none;
+}
+
+/* Submit Button */
+.btn-submit {
+    background-color: var(--link-colors);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width for the submit button */
+    text-align: center;
+    margin-top: 1rem; /* Space between the last field and the button */
+}
+
+.btn-submit:hover {
+    background-color: #d35802; /* Darker orange on hover */
+}
+
+.learning{
+   background-image: url(../assets/images/plan-bg.png);
+   
+}
+
+.form-div{
+    margin-left: 30%;
+}
+
+#learning-section {
+    margin-left: 37%;
+    margin-bottom: 1%;
+}
+
+#learning-section>h4{
+    color: var(--bg-color);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .journey {
+        padding: 20px;
+    }
+
+    .learning-form {
+        padding: 1.5r
+    }
+}
+
+
+/*Testimonial*/
+
+.first {
+    display: flex; /* Use flexbox to arrange items in a row */
+    align-items: center; /* Vertically center content */
+    justify-content: flex-start; /* Align items to the left */
+    width: 80%;
+    margin: 1%;
+    margin-left: 10%;
+    padding: 1rem;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.1);
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.first i{
+    color: var(--link-color);
+    font-size:  4rem;
+    margin-right: 10px;
+}
+
+.first p{
+    font-style: italic;
+    color: grey;
+    margin-right: 1.5rem; /* Create space for the image */
+    flex: 1;
+}
+
+.first h3, .first h5 {
+    margin-top: 15px;
+    color: #333;
+    text-align: center; /* Center align the name and title */
+    width: 100%; /* Make sure the name and title span the full width */
+    margin-right: 80%;
+}
+.first h5{
+    color: var(--link-color);
+}
+
+.first img {
+    width: 100px; /* Set the size of the image */
+    height: 100px; /* Set the size of the image */
+     /* Circular image */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+    margin-left: 1.5rem; /* Space between image and text */
+    border-radius: 10%;
+}
+
+.carousel button{
+    border-radius: 50%;
+    color: black;
+    background-color: yellow;
+    width: 5%;
+    height: 10%;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*address*/
+
+.contact-section {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9; /* Background color for the contact section */
+}
+
+.map-container {
+    position: relative;
+    margin-bottom: 1rem;
+
+}
+
+.map-address {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+iframe {
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+}
+
+.contact-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    flex: 1; /* Ensure each box takes equal width */
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px); /* Move up by 10px */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+.contact-item h5 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column; /* Stack the contact boxes on smaller screens */
+        gap: 1rem;
+    }
+}
+
+}
+
+
+/* Basic container and form styles */
+.contact-form {
+    padding: 2rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Input and Textarea styling */
+.form-control {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+/* Placeholder styling */
+.form-control::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+/* Hover effect: text color turns orange */
+.form-control:hover::placeholder {
+    color: #e36402; /* Turns placeholder text to orange */
+}
+
+.form-control:hover {
+    color: #e36402;  
+
+/* Textarea specific */
+textarea.form-control {
+    resize: vertical;
+}
+
+/* Submit Button */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #e36402;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #ff7c4d;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+    }
+}
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: blue;
+    color: white;
+    padding: 1rem 0;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/*footer*/
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer p:first-child {
+    font-weight: bold;
+}
+
+.footer p:last-child {
+    margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer p {
+        font-size: 0.85rem;
+    }
+}
+}
+
